@@ -3,6 +3,7 @@ class JobModel {
   final String company;
   final String companyImage;
   final String status;
+  final DateTime jobCreatedDate;
   final DateTime appliedDate;
   final String jobLocation;
   final String salaryRange;
@@ -15,6 +16,7 @@ class JobModel {
     required this.company,
     required this.companyImage,
     required this.status,
+    required this.jobCreatedDate,
     required this.appliedDate,
     required this.jobLocation,
     required this.salaryRange,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:job_quest/core/data/data.dart';
 import 'package:job_quest/core/utils/utils.dart';
+import 'package:job_quest/screens/details/details.dart';
 import 'package:job_quest/screens/home/home.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -32,7 +33,15 @@ class HomeScreen extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return JobCardWidget(
                     jobModel: DemoJobData.jobList[index],
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (_) => JobDetailsScreen(
+                            jobModel: DemoJobData.jobList[index],
+                          ),
+                        ),
+                      );
+                    },
                   );
                 },
               ),
